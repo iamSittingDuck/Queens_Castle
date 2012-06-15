@@ -1,0 +1,27 @@
+!!!
+html
+  head
+    title Node Frag Nexus
+    block styles
+      link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#wrapper
+      div.margin#left
+      div#body
+        div#header
+          img(src='./images/logo.png',id='logo')
+          div#mainMenu
+            div#left_end
+            div.menu_button
+              a(href='/') Home
+            div.menu_button
+              a(href='/about') About
+            div#right_end
+        div.clearfix#content
+          block content
+      div.margin#right
+      div#footer
+        p Copyright&copy 2012
+      div#margin_bottom
+
+block scripts

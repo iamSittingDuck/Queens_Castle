@@ -1,0 +1,30 @@
+#appView{
+  width: 63%;
+  display: inline-block;
+  min-height: 500px;
+  float: left;
+}
+
+#chat{
+  width:23%;
+  min-width: 250px;
+  float: right;
+  border: solid 1px white;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+#chat input{
+  position:absolute;
+  width:90%;
+  border: inset 3px white;
+  bottom: 5px;
+  left: 4%;
+}
+
+#chat p{
+  padding-left:10px;
+  text-align: left;
+  font-size: .8em;
+  color: white;
+};

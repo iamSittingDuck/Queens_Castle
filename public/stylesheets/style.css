@@ -1,0 +1,146 @@
+body, html {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #410000;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  color: white;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  margin-left: 50px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#wrapper{
+  margin: 0 auto;
+  width: 950px;
+  position:relative;
+}
+
+#body{
+  position:relative;
+  width: 900px;
+  left:25px;
+}
+
+#footer{
+  margin: 0px 50px;
+  text-align: right;
+  color: white;
+  font-size: .7em;
+  border-top: inset 1px white;
+  clear:both;
+}
+
+.margin{
+  height: 100%;
+  width: 25px;
+  bottom: 5px;
+}
+
+#left{
+  background: url('/images/margin_left.png') repeat-y;
+  background-position: right;
+  position: absolute;
+}
+
+#right{
+  float: right;
+  background: url('/images/margin_right.png') repeat-y;
+  position: absolute;
+  right: 0px;
+}
+
+#margin_bottom{
+  clear: both;
+  background: url('/images/margin_bottom.png') repeat-x;
+  height: 10px;
+  margin: 0 25px;
+}
+
+#logo{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  z-index:1;
+}
+
+#mainMenu{
+  height: 60px;
+  position:relative;
+  z-index:0;
+  top: -47px;
+  background-image: url('/images/menu_background.png')
+}
+
+#left_end{
+  background-image: url('/images/left_end.png');
+  float: left;
+  width: 50px;
+  height: 60px;
+}
+
+#content{
+  margin: 25px;
+  margin-top:0px;
+}
+
+#content h1{
+  text-decoration: underline;
+}
+
+.contentbox{
+  background: url('/images/content_box.png');
+  background-size: 100% 100%;
+  padding: 50px;
+}
+
+.contentbox h1{
+  color: #860A0A;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  text-decoration: underline;
+  margin-left: 15px;
+}
+
+#right_end{
+  background-image: url('/images/right_end.png');
+  float: right;
+  width: 50px;
+  height: 60px;
+}
+.menu_button{
+  float: left;
+  padding-left: 15px;
+  padding-top:15px;
+}
+
+.menu_button a{
+  color: white;
+  text-decoration: none;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  font-size: 1.2em;
+}
+
+.menu_button a:hover{
+  color: red;
+  text-shadow: 0.1em 0.1em, 0.2em black;
+}

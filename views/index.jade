@@ -1,0 +1,25 @@
+extends layout
+append styles
+  link(rel='stylesheet', href='/stylesheets/landing.css')
+block content
+  h1 Welcome to Queen's Castle
+  div.formbox.contentbox#login
+    form(name='login', action='/user/auth',method='post')
+      h1 Please Log-In:
+      label(for="email") Email:
+        input(type="text",id="email",name='email')
+      label(for="pwd") Password:
+        input(type='password',id='pwd',name='password')
+      input(type='submit',value='Login',class='formbtn')
+  div#or
+    p -OR-
+  div.formbox.contentbox#register
+    form(name='login', action='/user/new',method='post')
+      h1 Register here:
+      label(for="email") Email:
+        input(type="text",id="email",name='email')
+      label(for="pwd") Password:
+        input(type='password',id="pwd",name='password')
+      label(for='nickName') nickName:
+        input(type="text",id="nickName",name="nickName")
+      input(type='submit',value='Register', class='formbtn')

@@ -1,0 +1,47 @@
+.formbox{
+  width: 35%;
+  height: 250px;
+}
+
+#login{
+  float: left;
+}
+
+#register{
+  float:right;
+}
+
+.formbox form{
+  border:solid 1px white;
+  height: 100%;
+  width: 100%;
+}
+
+.formbox h1{
+  text-align: center;
+}
+
+.formbox input{
+  display:block;
+}
+
+.formbox label{
+  display: block;
+  margin: 15px 25px;
+  width: 80%;
+}
+
+.formbtn{
+  margin: 15px 25px;
+}
+
+#or{
+  float:left;
+  font-size: 1.3em;
+  color:whitesmoke;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  text-align:center;
+  line-height:300px;
+  margin-left:5px;
+}

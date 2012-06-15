@@ -1,0 +1,41 @@
+extends ../layout
+append styles
+  link(rel='stylesheet',href='/stylesheets/app.css')
+
+block content
+  div.clearfix
+    div#appView
+    div#chat
+      input#message_bar
+
+append scripts
+  script(src='/socket.io/socket.io.js');
+  script(src='/js/vendor/jquery-1.7.2.min.js')
+  script(src='/js/vendor/Three.js')
+  script(src='/js/lib/core.js')
+  script(src='/js/lib/boardHelper.js')
+  script(src='/js/lib/cameraHelper.js')
+  script(src='/js/lib/lightHelper.js')
+  script(src='/js/index.js')
+  script
+    var handle = '#{nickName}'
+    var socket = io.connect('http://localhost');
+
+    function createMsg(msg, sysmessage){
+      var str = '<p>';
+      if(sysmessage){
+        str += '<b>' + msg + '</b>';
+      }else{
+        str += msg;
+      }
+      str += '</p>'
+      return str
+    }
+
+    socket.on('welcomeMsg',function(data){
+      $(createMsg(data.msg,true)).appendTo('div#chat');
+      socket.emit('userConnected',{nickName:handle});
+    });
+    socket.on('userConnected',function(data){
+      $(createMsg(data.msg,true)).appendTo('div#chat');
+    });
