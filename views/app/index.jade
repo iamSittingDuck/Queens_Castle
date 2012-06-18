@@ -9,7 +9,7 @@ block content
       input#message_bar
 
 append scripts
-  script(src='/socket.io/socket.io.js');
+  script(src='/js/vendor/socket.io.min.js');
   script(src='/js/vendor/jquery-1.7.2.min.js')
   script(src='/js/vendor/Three.js')
   script(src='/js/lib/core.js')
@@ -20,7 +20,7 @@ append scripts
   script
     var handle = '#{nickName}'
     var socket = io.connect('http://localhost');
-
+    console.log(socket)
     function createMsg(msg, sysmessage){
       var str = '<p>';
       if(sysmessage){
@@ -31,7 +31,6 @@ append scripts
       str += '</p>'
       return str
     }
-
     socket.on('welcomeMsg',function(data){
       $(createMsg(data.msg,true)).appendTo('div#chat');
       socket.emit('userConnected',{nickName:handle});
