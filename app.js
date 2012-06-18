@@ -10,6 +10,8 @@ var app = module.exports = express.createServer();
 // ================================================
 // AutoLoad in modules
   var autoLoad = ['controllers','models'];
+  //load in config variables
+  app.config = require('./config/index')(app);
 // ================================================
 
 for(x in autoLoad){
@@ -26,9 +28,7 @@ for(x in autoLoad){
   })
   app[autoLoad[x]] = obj;
 }
-//load in config variables
-app.config = require('./config/index')(app);
-console.log(app.config);
+
 // ================================================
 // Config
 // ================================================
@@ -44,7 +44,7 @@ app.configure(function(){
   app.use(express.session({
     secret: 'mysecret',
     store: new MongoStore({
-      db:'session'
+      db: 'QueenSession'
     })
   }));
   app.use(app.router);
