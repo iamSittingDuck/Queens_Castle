@@ -42,7 +42,7 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
   app.use(express.cookieParser());
   app.use(express.session({
-    secret: 'secret',
+    secret: 'mysecret',
     store: new MongoStore({
       db:'session'
     })
