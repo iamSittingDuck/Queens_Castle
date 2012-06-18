@@ -80,7 +80,7 @@ app.listen(8080, function(){
 // Create Event Emmiter
 // TODO: Move somewhere else
 // ================================================
-var io = require('socket.io').listen('http://queens_castle.jit.su/');
+var io = require('socket.io').listen(app);
 io.sockets.on('connection',function(socket){
   socket.emit('welcomeMsg',{msg:'You have connected!'});
   socket.on('userConnected',function(data){

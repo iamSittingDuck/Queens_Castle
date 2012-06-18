@@ -19,7 +19,7 @@ append scripts
   script(src='/js/index.js')
   script
     var handle = '#{nickName}'
-    var socket = io.connect('http://localhost');
+    var socket = io.connect('http://localhost:80');
     console.log(socket)
     function createMsg(msg, sysmessage){
       var str = '<p>';
