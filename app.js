@@ -41,12 +41,12 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
   app.use(express.cookieParser());
-  app.use(express.session({
-    secret: 'mysecret',
-    store: new MongoStore({
-      db: 'QueenSession'
-    })
-  }));
+  // app.use(express.session({
+  //   secret: '',
+  //   store: new MongoStore({
+  //     db: 'QueenSession'
+  //   })
+  // }));
   app.use(app.router);
 });
 
