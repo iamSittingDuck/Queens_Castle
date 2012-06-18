@@ -43,8 +43,8 @@ app.configure(function(){
   app.use(express.cookieParser());
   app.use(express.session({
     secret: 'mysecret',
-    host: app.config.db,
     store: new MongoStore({
+      url: app.config.db,
       db: 'QueenSession'
     })
   }));
