@@ -2,7 +2,6 @@
 // Module Dependencies
 // ================================================
 var express     = require('express')
-  , routes      = require('./routes')
   , fs          = require('fs')
   , path        = require('path')
   , MongoStore  = require('connect-mongo')(express);
@@ -28,8 +27,8 @@ for(x in autoLoad){
   app[autoLoad[x]] = obj;
 }
 //load in config variables
-app.config = require('./config')(app);
-
+app.config = require('./config/index')(app);
+console.log(app.config);
 // ================================================
 // Config
 // ================================================
