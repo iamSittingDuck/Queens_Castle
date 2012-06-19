@@ -18,8 +18,10 @@ append scripts
   script(src='/js/lib/lightHelper.js')
   script(src='/js/index.js')
   script
-    var handle = '#{nickName}'
-    var socket = io.connect('http://queens_castle.jit.su/');
+    var url = '#{url}';
+    console.log(url);
+    var handle = '#{nickName}';
+    var socket = io.connect(url);
     console.log(app)
     function createMsg(msg, sysmessage){
       var str = '<p>';

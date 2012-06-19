@@ -21,7 +21,7 @@ module.exports = function(app){
           req.session.user = tmp;
           res.redirect('/app')
         }else{
-          res.send('Wrong Username/Password!')
+          res.render('/');
         }
       })
     },
